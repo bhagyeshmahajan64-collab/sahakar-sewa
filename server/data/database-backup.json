@@ -1,0 +1,263 @@
+{
+  "users": [
+    {
+      "id": "u_1789652555473_ibfsj4",
+      "name": "Bhagyesh Mahajan",
+      "email": "bhagyeshmahajan64@gmail.com",
+      "phone": "1234567788",
+      "role": "admin",
+      "password": "$2a$12$ZUvpvbR7YsWw/3WOlNKXxuyxAh0Jt.LeH5S20iq20Lsd3.GEgTPb.",
+      "createdAt": "2026-09-17T13:42:35.980Z"
+    },
+    {
+      "id": "u_1789653137411_vg50ah",
+      "name": "customer1",
+      "email": "bhagyeshmahajan1282@gmail.com",
+      "phone": "1234567891",
+      "role": "customer",
+      "password": "$2a$12$S22h9tweks.IAeHVEEp.4OMKYpD25nSAGSaYJNWXyW4s9KI751Ylq",
+      "createdAt": "2026-09-17T13:52:17.905Z"
+    },
+    {
+      "id": "u_1789653319280_nb466x",
+      "name": "worker1",
+      "email": "bhagyesh12@gmail.com",
+      "phone": "1234567891",
+      "role": "worker",
+      "password": "$2a$12$uZa5JhTS4Ft7jtCLF93rROcX0i1CtwTO.NIZw9jhPxVzVa4/J6Rb6",
+      "createdAt": "2026-09-17T13:55:19.795Z"
+    },
+    {
+      "id": "u_1789653637567_bb365f",
+      "name": "worker2",
+      "email": "bhagyeshmahajan13@gmail.com",
+      "phone": "1234567891",
+      "role": "worker",
+      "password": "$2a$12$1ZmcjFB1ottHH1uHBRWZguXIxfCRInR9UAFuPdtX8jd3heXjHvdey",
+      "createdAt": "2026-09-17T14:00:38.083Z"
+    },
+    {
+      "id": "u_1789654870529_uj4xg4",
+      "name": "worker2",
+      "email": "bhagyeshmahajan12@gmail.com",
+      "phone": "1234567788",
+      "role": "worker",
+      "password": "$2a$12$M708MdEiEPME09TnPaa9Ke1ZrgHOmxCjkRJCcE/Qh97qfYqUfmM.C",
+      "createdAt": "2026-09-17T14:21:11.035Z"
+    }
+  ],
+  "workers": [
+    {
+      "id": "w_1789653319800_1qdkgx",
+      "userId": "u_1789653319280_nb466x",
+      "name": "worker1",
+      "phone": "1234567891",
+      "skills": [
+        "Plumbing",
+        "Electrician"
+      ],
+      "documents": [],
+      "verified": true,
+      "verificationStatus": "verified",
+      "rating": 0,
+      "jobs": 0,
+      "workload": 0,
+      "location": null,
+      "available": true,
+      "cooperative": "",
+      "createdAt": "2026-09-17T13:55:19.800Z"
+    },
+    {
+      "id": "w_1789653638088_vc7fnz",
+      "userId": "u_1789653637567_bb365f",
+      "name": "worker2",
+      "phone": "1234567891",
+      "skills": [
+        "Electrical repair"
+      ],
+      "documents": [],
+      "verified": true,
+      "verificationStatus": "verified",
+      "rating": 0,
+      "jobs": 0,
+      "workload": 0,
+      "location": null,
+      "available": true,
+      "cooperative": "",
+      "createdAt": "2026-09-17T14:00:38.088Z"
+    },
+    {
+      "id": "w_1789654871042_mz8jll",
+      "userId": "u_1789654870529_uj4xg4",
+      "name": "worker2",
+      "phone": "1234567788",
+      "skills": [
+        "Electrical repair"
+      ],
+      "documents": [],
+      "verified": true,
+      "verificationStatus": "verified",
+      "rating": 2.5,
+      "jobs": 1,
+      "workload": 0,
+      "location": null,
+      "available": true,
+      "cooperative": "",
+      "createdAt": "2026-09-17T14:21:11.042Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "s_1789653016894_brl3hu",
+      "name": "Electrical Repair",
+      "category": "home services",
+      "description": "Electrical installation and repair services\n",
+      "price": 500,
+      "icon": "🛠️",
+      "active": true,
+      "createdAt": "2026-09-17T13:50:16.894Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b_1789653516850_4v4bop",
+      "customerId": "u_1789653137411_vg50ah",
+      "serviceId": "s_1789653016894_brl3hu",
+      "serviceName": "Electrical Repair",
+      "issue": "electrical repair",
+      "scheduledAt": "2026-09-18T19:27",
+      "location": {
+        "address": "gdhdhdhdhdhdh",
+        "lat": 0,
+        "lng": 0
+      },
+      "emergency": false,
+      "amount": 500,
+      "status": "SEARCHING",
+      "workerId": null,
+      "paymentId": null,
+      "createdAt": "2026-09-17T13:58:36.850Z",
+      "updatedAt": "2026-09-17T13:58:36.850Z",
+      "timeline": [
+        {
+          "label": "Booking created",
+          "at": "2026-09-17T13:58:36.850Z"
+        }
+      ]
+    },
+    {
+      "id": "b_1789653786731_v4vrag",
+      "customerId": "u_1789653137411_vg50ah",
+      "serviceId": "s_1789653016894_brl3hu",
+      "serviceName": "Electrical Repair",
+      "issue": "Electrical Repair",
+      "scheduledAt": null,
+      "location": {
+        "address": "Airoli",
+        "lat": 0,
+        "lng": 0
+      },
+      "emergency": true,
+      "amount": 500,
+      "status": "SEARCHING",
+      "workerId": null,
+      "paymentId": null,
+      "createdAt": "2026-09-17T14:03:06.731Z",
+      "updatedAt": "2026-09-17T14:03:06.731Z",
+      "timeline": [
+        {
+          "label": "Booking created",
+          "at": "2026-09-17T14:03:06.731Z"
+        }
+      ]
+    },
+    {
+      "id": "b_1789655020614_ln4s23",
+      "customerId": "u_1789653137411_vg50ah",
+      "serviceId": "s_1789653016894_brl3hu",
+      "serviceName": "Electrical Repair",
+      "issue": "Electrical Repair",
+      "scheduledAt": "2026-09-17T19:52",
+      "location": {
+        "address": "Dom",
+        "lat": 0,
+        "lng": 0
+      },
+      "emergency": true,
+      "amount": 500,
+      "status": "PAID",
+      "workerId": "w_1789654871042_mz8jll",
+      "paymentId": "p_1789655157272_uskq7m",
+      "createdAt": "2026-09-17T14:23:40.614Z",
+      "updatedAt": "2026-09-17T14:25:59.459Z",
+      "timeline": [
+        {
+          "label": "Booking created",
+          "at": "2026-09-17T14:23:40.614Z"
+        },
+        {
+          "label": "Automatically assigned to worker2",
+          "at": "2026-09-17T14:23:40.615Z"
+        },
+        {
+          "label": "Assigned to worker2",
+          "at": "2026-09-17T14:23:44.994Z"
+        },
+        {
+          "label": "Worker accepted assignment",
+          "at": "2026-09-17T14:24:17.440Z"
+        },
+        {
+          "label": "Service status: ON WAY",
+          "at": "2026-09-17T14:24:19.808Z"
+        },
+        {
+          "label": "Service status: ARRIVED",
+          "at": "2026-09-17T14:24:22.604Z"
+        },
+        {
+          "label": "Service status: IN PROGRESS",
+          "at": "2026-09-17T14:24:24.227Z"
+        },
+        {
+          "label": "Service status: COMPLETED",
+          "at": "2026-09-17T14:24:25.310Z"
+        },
+        {
+          "label": "Payment recorded and settlement split calculated",
+          "at": "2026-09-17T14:25:57.272Z"
+        },
+        {
+          "label": "Customer feedback received: 5/5",
+          "at": "2026-09-17T14:25:59.459Z"
+        }
+      ]
+    }
+  ],
+  "payments": [
+    {
+      "id": "p_1789655157272_uskq7m",
+      "bookingId": "b_1789655020614_ln4s23",
+      "amount": 500,
+      "method": "UPI",
+      "status": "PAID",
+      "split": {
+        "worker": 400,
+        "cooperative": 75,
+        "welfare": 25
+      },
+      "paidAt": "2026-09-17T14:25:57.272Z"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "f_1789655159459_64pa36",
+      "bookingId": "b_1789655020614_ln4s23",
+      "customerId": "u_1789653137411_vg50ah",
+      "workerId": "w_1789654871042_mz8jll",
+      "rating": 5,
+      "comment": "Verified service completed successfully.",
+      "createdAt": "2026-09-17T14:25:59.459Z"
+    }
+  ]
+}

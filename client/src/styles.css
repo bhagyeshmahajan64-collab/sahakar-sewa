@@ -1,0 +1,890 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17202a;
+  background: #f4f7fb;
+  line-height: 1.45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.loginPage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #eef5fb, #f8f2ff);
+  padding: 20px;
+}
+
+.loginCard {
+  width: min(460px, 100%);
+  background: white;
+  border: 1px solid #dce5ef;
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 24px 70px #19324d18;
+  text-align: center;
+}
+
+.brandMark {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: #17324d;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  margin: auto;
+}
+
+.loginCard h1 {
+  margin: 14px 0 4px;
+}
+
+.muted {
+  color: #68778a;
+}
+
+.small {
+  font-size: 12px;
+  color: #748196;
+}
+
+.demoRow {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 22px 0;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid #ccd7e3;
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+.loginCard form {
+  text-align: left;
+  display: grid;
+  gap: 13px;
+}
+
+.loginCard label,
+.formGrid label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.loginCard input,
+.loginCard select,
+.formGrid input,
+.formGrid select,
+.formGrid textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #cfd9e5;
+  border-radius: 10px;
+  background: #fbfcfe;
+  outline: none;
+}
+
+.loginCard input:focus,
+.loginCard select:focus,
+.formGrid input:focus,
+.formGrid select:focus,
+.formGrid textarea:focus {
+  border-color: #6f8eaa;
+  box-shadow: 0 0 0 3px #17324d12;
+}
+
+.formGrid textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.primary,
+.secondary {
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-weight: 800;
+}
+
+.primary {
+  background: #17324d;
+  color: white;
+}
+
+.primary:hover {
+  background: #234765;
+}
+
+.secondary {
+  background: #e9eff6;
+  color: #17324d;
+}
+
+.secondary:hover {
+  background: #dce6f0;
+}
+
+.full {
+  width: 100%;
+}
+
+.error {
+  background: #fff0f0;
+  color: #b42318;
+  border-radius: 9px;
+  padding: 9px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   APP LAYOUT
+========================================================= */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+aside {
+  width: 255px;
+  background: #142d46;
+  color: #dce8f3;
+  padding: 22px 15px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0 auto 0 0;
+}
+
+.sideBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 9px 26px;
+  font-size: 18px;
+}
+
+.sideBrand span {
+  display: block;
+  color: #91a6ba;
+  font-size: 12px;
+}
+
+.smallMark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 13px;
+  margin: 0;
+}
+
+.roleBadge {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #9eb2c6;
+  padding: 8px 10px;
+}
+
+nav {
+  display: grid;
+  gap: 5px;
+}
+
+.nav {
+  border: 0;
+  background: transparent;
+  color: #c6d4e1;
+  text-align: left;
+  padding: 12px 13px;
+  border-radius: 10px;
+}
+
+.nav.active,
+.nav:hover {
+  background: #234765;
+  color: #fff;
+}
+
+.sideBottom {
+  margin-top: auto;
+  border-top: 1px solid #315069;
+  padding: 15px 7px;
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  gap: 9px;
+  align-items: center;
+}
+
+.sideBottom b,
+.sideBottom span {
+  display: block;
+  font-size: 12px;
+}
+
+.sideBottom span {
+  color: #9eb2c6;
+  font-size: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e7eff7;
+  color: #17324d;
+  font-weight: 900;
+}
+
+.avatar.big {
+  width: 76px;
+  height: 76px;
+  font-size: 28px;
+  margin: auto;
+}
+
+.logout {
+  grid-column: 1 / -1;
+  background: transparent;
+  border: 1px solid #47637b;
+  color: #dce8f3;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.logout:hover {
+  background: #234765;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+  margin-left: 255px;
+  flex: 1;
+  padding: 28px;
+  min-width: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  color: #73859a;
+  font-weight: 800;
+}
+
+header h2 {
+  margin: 4px 0 0;
+  font-size: 26px;
+}
+
+.headerUser {
+  font-size: 13px;
+  color: #5f7083;
+}
+
+.onlineDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22a06b;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.stat,
+.panel {
+  background: white;
+  border: 1px solid #dce5ef;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px #19324d08;
+}
+
+.stat {
+  padding: 18px;
+}
+
+.stat span,
+.stat small {
+  display: block;
+  color: #728196;
+  font-size: 12px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 27px;
+  margin: 6px 0;
+}
+
+/* =========================================================
+   PANELS / GRID
+========================================================= */
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.panel {
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.panel h3 {
+  margin: 0 0 5px;
+}
+
+.panelTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #f0f7ff, #fbf7ff);
+  min-height: 230px;
+}
+
+.heroIcon {
+  font-size: 38px;
+}
+
+.hero h3 {
+  font-size: 24px;
+  margin-top: 12px;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline {
+  display: grid;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.timeline > div {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.timeline i {
+  font-style: normal;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e5edf6;
+  color: #17324d;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 900;
+  flex: 0 0 auto;
+}
+
+.timeline span {
+  font-size: 13px;
+}
+
+.timeline small {
+  display: block;
+  color: #8b98a8;
+  font-size: 10px;
+}
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.check {
+  display: flex !important;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.check input {
+  width: auto;
+}
+
+.notice {
+  background: #eef8f4;
+  color: #176b4b;
+  border: 1px solid #c8e7da;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   BADGES
+========================================================= */
+
+.badge {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #edf2f7;
+  color: #42566b;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+/* =========================================================
+   MATCHING
+========================================================= */
+
+.matchList {
+  display: grid;
+  gap: 10px;
+}
+
+.match {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e1e8ef;
+  border-radius: 12px;
+}
+
+.rank {
+  width: 27px;
+  height: 27px;
+  border-radius: 8px;
+  background: #e8eff6;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+
+.grow b,
+.grow span {
+  display: block;
+}
+
+.grow span {
+  font-size: 11px;
+  color: #718094;
+}
+
+.empty {
+  padding: 28px;
+  text-align: center;
+  color: #758396;
+  border: 1px dashed #cbd7e2;
+  border-radius: 12px;
+}
+
+/* =========================================================
+   TABLES
+========================================================= */
+
+.table {
+  display: grid;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 4px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.row:last-child {
+  border: 0;
+}
+
+.row > div:first-child {
+  flex: 1;
+}
+
+.row span {
+  display: block;
+  color: #748196;
+  font-size: 11px;
+}
+
+.row strong {
+  min-width: 60px;
+  text-align: right;
+}
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background: #f7f9fc;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.detailGrid span,
+.detailGrid b {
+  display: block;
+  font-size: 11px;
+}
+
+.detailGrid span {
+  color: #7a8999;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* =========================================================
+   JOBS
+========================================================= */
+
+.jobCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  border: 1px solid #e0e7ef;
+  border-radius: 13px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.jobCard h3 {
+  margin: 7px 0 2px;
+}
+
+.jobCard p {
+  margin: 3px 0;
+  font-size: 12px;
+}
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile {
+  text-align: center;
+}
+
+.profile h2 {
+  margin-bottom: 8px;
+}
+
+.doc {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #e3e9ef;
+  border-radius: 9px;
+  margin: 7px 0;
+  text-align: left;
+  font-size: 12px;
+}
+
+.doc span {
+  color: #17835a;
+  font-weight: 900;
+}
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+.adminFlow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+  margin: 18px 0;
+}
+
+.adminFlow div {
+  background: #eef4fa;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.coreLogic {
+  font-size: 17px;
+  line-height: 1.8;
+  padding: 20px;
+  border-left: 4px solid #6f4bbd;
+  background: #f8f5fc;
+  border-radius: 8px;
+}
+
+.workerRow {
+  padding: 12px 0;
+}
+
+/* =========================================================
+   LIVE STATUS
+========================================================= */
+
+.livePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #eef8f4;
+  color: #176b4b;
+  border: 1px solid #c8e7da;
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 11px;
+  font-weight: 800;
+  margin: 14px 0;
+}
+
+.livePill span {
+  width: 7px;
+  height: 7px;
+  background: #22a06b;
+  border-radius: 50%;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f1f4f8;
+  padding: 4px;
+  border-radius: 10px;
+  margin: 10px 0 18px;
+}
+
+.tab {
+  border: 0;
+  background: transparent;
+  padding: 9px;
+  border-radius: 8px;
+  color: #647386;
+  font-weight: 800;
+}
+
+.tab.active {
+  background: white;
+  color: #17324d;
+  box-shadow: 0 2px 8px #17324d12;
+}
+
+/* =========================================================
+   LOGIN EXTRAS
+========================================================= */
+
+.loginCard .chip {
+  cursor: pointer;
+}
+
+.loginCard .notice {
+  text-align: left;
+  margin: 0;
+}
+
+.loginCard form {
+  max-height: 65vh;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.loginCard select {
+  appearance: auto;
+}
+
+.primary:disabled,
+.secondary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  aside {
+    width: 72px;
+    padding: 15px 8px;
+  }
+
+  .sideBrand div:last-child,
+  .roleBadge,
+  .nav {
+    font-size: 0;
+  }
+
+  .nav:before {
+    content: "•";
+    font-size: 20px;
+  }
+
+  .sideBottom > div:nth-child(2) {
+    display: none;
+  }
+
+  main {
+    margin-left: 72px;
+    padding: 18px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .adminFlow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detailGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  main {
+    padding: 13px;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+
+  .headerUser {
+    display: none;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 12px;
+  }
+
+  .stat strong {
+    font-size: 21px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide {
+    grid-column: auto;
+  }
+
+  .jobCard {
+    display: block;
+  }
+
+  .jobCard .buttonRow {
+    margin-top: 10px;
+  }
+
+  .detailGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .match {
+    flex-wrap: wrap;
+  }
+
+  .match .secondary {
+    width: 100%;
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+client/node_modules/
+client/dist/
+.env
+server/data/database.json
+*.log
+client/.env
+dist/
+npm-debug.log*
+.DS_Store
