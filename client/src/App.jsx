@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-const API='/api';
+const API = import.meta.env.VITE_API_URL || '/api';
 async function api(path,opts={}){const token=localStorage.getItem('sahakar_token');const res=await fetch(API+path,{...opts,headers:{'Content-Type':'application/json',...(token?{Authorization:`Bearer ${token}`}:{})}});const data=await res.json().catch(()=>({}));if(!res.ok)throw new Error(data.message||'Request failed');return data;}
 function Login({onLogin}){
  const [register,setRegister]=useState(false),[form,setForm]=useState({name:'',email:'',password:'',phone:'',role:'customer',skills:'',adminCode:''}),[error,setError]=useState(''),[busy,setBusy]=useState(false);
